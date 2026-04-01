@@ -1,0 +1,3005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocoburn Protocol</title>
+
+  <!-- ============================================================
+       META PIXEL — replace with your real code or remove this block
+       ============================================================ -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
+  -->
+
+  <!-- ============================================================
+       GOOGLE TAG MANAGER — replace with your ID or remove this block
+       ============================================================ -->
+  <!--
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What exactly is the Cocoburn Ketogenic Protocol?","acceptedAnswer":{"@type":"Answer","text":"The Cocoburn Ketogenic Protocol is a 100% digital, science-based system developed by Dr. Amanda Johnson — a Stanford-trained nutrition specialist who spent 8 years researching metabolic health in the Philippines. The protocol combines the fat-burning power of Filipino coconut oil's ultra-concentrated MCTs with Swiss metabolic technology to trigger instant, natural ketosis in your body — in as little as 30 to 60 minutes — without cutting carbs, without fasting, and without gym workouts."}},
+      {"@type":"Question","name":"Is this safe? Are there any side effects?","acceptedAnswer":{"@type":"Answer","text":"Absolutely safe. Unlike Ozempic, Mounjaro, or other weight loss injections that can cause nausea, vomiting, gastric paralysis, and pancreatitis, the Cocoburn Ketogenic Protocol is 100% natural. There are no needles, no pills, no chemical compounds. Thousands of women over 38 have followed this protocol with zero adverse effects."}},
+      {"@type":"Question","name":"I've tried everything — keto, fasting, calorie counting. Why would this be any different?","acceptedAnswer":{"@type":"Answer","text":"The Cocoburn Protocol is different because it doesn't fight your biology — it works with it. The specific MCT concentration triggers ketosis chemically, through your liver, in 30 minutes — regardless of what you ate the night before. You stay in fat-burning mode without restriction."}},
+      {"@type":"Question","name":"How quickly will I see results?","acceptedAnswer":{"@type":"Answer","text":"Most women notice reduced bloating and lower hunger within the first 3 to 5 days. By the end of the first week, the scale starts moving. In the first 14 days, clinical results show an average of 14 to 18 pounds lost. By the end of 3 months, women following the full protocol report losses between 40 and 65 pounds."}},
+      {"@type":"Question","name":"Do I need to follow a strict diet or exercise while using the protocol?","acceptedAnswer":{"@type":"Answer","text":"No. The Cocoburn Ketogenic Protocol was specifically designed for busy women who have families, jobs, and real lives. You don't need to cut carbs, count calories, or set foot in a gym. The 10-second morning ritual forces your body into ketosis on its own."}},
+      {"@type":"Question","name":"Is $19 really the final price? Why is it so affordable?","acceptedAnswer":{"@type":"Answer","text":"Yes — $19 is the real promotional price for Lifetime Access. The Cocoburn Ketogenic Protocol is a digital system with no pills to manufacture, no bottles to ship, no middlemen to pay. This price is only available for the first batch of Lifetime Access licenses."}},
+      {"@type":"Question","name":"What happens right after I purchase? How do I access the protocol?","acceptedAnswer":{"@type":"Answer","text":"Access is 100% immediate and digital. The moment your payment is confirmed, you receive an email to your registered address with your full access link. You can start your first morning ritual as soon as today."}},
+      {"@type":"Question","name":"What if it doesn't work for me? Is there a guarantee?","acceptedAnswer":{"@type":"Answer","text":"Yes — and it's completely unconditional. You have 30 full days to follow the Cocoburn Ketogenic Protocol. If for any reason you are not satisfied, simply send an email to our support team and you will receive a 100% refund. No questions asked."}},
+      {"@type":"Question","name":"Is this only for women over 38? Can younger women and men use it?","acceptedAnswer":{"@type":"Answer","text":"The protocol was specifically developed for women over 38, but the underlying science of MCT-induced ketosis works for any adult. Younger women dealing with post-pregnancy weight or hormonal imbalances have also reported excellent results."}},
+      {"@type":"Question","name":"Why haven't I heard of this before? Why don't doctors talk about it?","acceptedAnswer":{"@type":"Answer","text":"Pharmaceutical companies generate over $100 billion a year from weight loss injections. A natural, one-time $19 solution is their worst nightmare. Dr. Amanda Johnson left pharmaceutical research precisely because she refused to participate in creating lifelong dependency."}}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & VARIABLES
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0a0a;
+      --bg2:      #111111;
+      --card:     #1a1a1a;
+      --card2:    #222222;
+      --text:     #ffffff;
+      --muted:    #aaaaaa;
+      --cta:      #22c55e;
+      --cta-dark: #16a34a;
+      --gold:     #fbbf24;
+      --danger:   #ef4444;
+      --border:   #2a2a2a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.2;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    /* ============================================================
+       ANIMATIONS
+       ============================================================ */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+      50%       { transform: scale(1.04); box-shadow: 0 0 0 14px rgba(34,197,94,0); }
+    }
+    @keyframes pulseRing {
+      0%   { box-shadow: 0 0 0 0   rgba(34,197,94,0.5); }
+      70%  { box-shadow: 0 0 0 18px rgba(34,197,94,0); }
+      100% { box-shadow: 0 0 0 0   rgba(34,197,94,0); }
+    }
+    @keyframes loadingBar {
+      from { width: 0%; }
+      to   { width: 100%; }
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    .fade-in  { animation: fadeIn  0.6s ease forwards; }
+    .slide-up { animation: slideUp 0.7s ease forwards; }
+
+    /* ============================================================
+       UTILITIES
+       ============================================================ */
+    .hidden  { display: none !important; }
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto;
+      max-width: 600px;
+    }
+    .container {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .gold { color: var(--gold); }
+    .green { color: var(--cta); }
+    .red { color: var(--danger); }
+
+    /* ============================================================
+       DEFAULT CTA BUTTON
+       ============================================================ */
+    .btn-cta {
+      display: inline-block;
+      background: var(--cta);
+      color: #000;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      padding: 20px 40px;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      max-width: 560px;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 30px rgba(34,197,94,0.35);
+      animation: pulseRing 2s infinite;
+    }
+    .btn-cta:hover {
+      background: var(--cta-dark);
+      transform: scale(1.03);
+    }
+    .btn-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .guarantee-text {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ============================================================
+       ███  STEP 1 — VSL (advertorial / news style)
+       ============================================================ */
+    #page-vsl {
+      min-height: 100vh;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0 0;
+    }
+
+    /* Newspaper header */
+    .news-header {
+      background: #cc0000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 14px 20px;
+      width: 100%;
+    }
+    .news-header-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+    }
+    .news-header-menu {
+      position: absolute;
+      right: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* News ticker */
+    @keyframes ticker {
+      from { transform: translateX(100vw); }
+      to   { transform: translateX(-100%); }
+    }
+    .news-ticker {
+      background: #aa0000;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 7px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+    .news-ticker-inner {
+      display: inline-block;
+      animation: ticker 22s linear infinite;
+    }
+
+    /* Author */
+    .news-author-wrap {
+      padding: 18px 20px 0;
+      max-width: 720px;
+      width: 100%;
+    }
+    .news-author-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #111;
+    }
+    .news-author-date {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Editorial warning */
+    .news-warning {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 700;
+      text-align: center;
+      max-width: 680px;
+      line-height: 1.5;
+      color: #1a1a4e;
+      padding: 0 20px;
+      margin: 22px auto 28px;
+    }
+    .news-warning .warn-label {
+      color: #cc0000;
+    }
+
+    /* VSL headlines (kept for optional use below the warning) */
+    .vsl-headline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.3rem, 3.5vw, 2rem);
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      max-width: 720px;
+      color: #111;
+      padding: 0 20px;
+    }
+    .vsl-headline span { color: #cc0000; }
+
+    .vsl-subheadline {
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      color: #555;
+      text-align: center;
+      max-width: 620px;
+      margin-bottom: 28px;
+      padding: 0 20px;
+    }
+
+    /* Player VTurb */
+    .vsl-player-wrap {
+      width: 100%;
+      max-width: 800px;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+      margin-bottom: 36px;
+      /* Proporção 16:9 */
+      position: relative;
+      padding-top: 56.25%;
+    }
+    .vsl-player-wrap > * {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /* Botão VSL */
+    #btn-vsl-wrap {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      animation: slideUp 0.7s ease forwards;
+    }
+    #btn-vsl {
+      font-size: 1.15rem;
+      padding: 22px 44px;
+      animation: pulse 2s infinite;
+    }
+    .vsl-scarcity {
+      font-size: 0.85rem;
+      color: var(--danger);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ============================================================
+       ███  STEP 2 — QUIZ (redesign: warm gradient)
+       ============================================================ */
+    #page-quiz {
+      display: none;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #5a0e0e 0%, #8b2e1a 45%, #c47a50 100%);
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px 50px;
+    }
+    #page-quiz.active { display: flex; }
+
+    /* Quiz header (always visible) */
+    .quiz-header {
+      text-align: center;
+      max-width: 340px;
+      width: 100%;
+      margin-bottom: 18px;
+    }
+    .quiz-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.25rem, 4vw, 1.6rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .quiz-title .quiz-title-highlight { color: var(--gold); }
+    .quiz-subtitle {
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.55;
+    }
+
+    /* Question */
+    .quiz-question-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      max-width: 340px;
+      width: 100%;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    /* Options */
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 340px;
+    }
+    .quiz-option {
+      background: rgba(70, 8, 8, 0.72);
+      border: 1.5px solid rgba(255,255,255,0.35);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 15px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.18s, border-color 0.18s;
+      width: 100%;
+    }
+    .quiz-option:hover,
+    .quiz-option.selected {
+      background: rgba(110, 15, 10, 0.95);
+      border-color: rgba(255,255,255,0.8);
+    }
+    /* Multi-select checkbox option */
+    .quiz-option-check {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .quiz-option-check input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    /* Navigation (prev + generate) */
+    .quiz-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+      width: 100%;
+      max-width: 340px;
+    }
+    .quiz-prev-btn {
+      background: rgba(200,200,200,0.25);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 12px 36px;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    .quiz-prev-btn:hover { background: rgba(200,200,200,0.4); }
+    .btn-generate {
+      background: #fde047;
+      color: #111;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 28px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.18s, transform 0.15s;
+    }
+    .btn-generate:hover { background: #facc15; transform: scale(1.02); }
+
+    /* Loading */
+    #page-loading {
+      display: none;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #5a0e0e 0%, #8b2e1a 45%, #c47a50 100%);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #page-loading.active { display: flex; }
+
+    .loading-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+      max-width: 680px;
+    }
+    .loading-subtitle {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      margin-bottom: 36px;
+      max-width: 680px;
+      line-height: 1.6;
+    }
+    .loading-subtitle .hl-gold { color: var(--gold); font-weight: 700; }
+    .loading-subtitle .hl-white { color: #fff; font-weight: 700; }
+    .loading-bar-bg {
+      width: 100%;
+      max-width: 500px;
+      height: 14px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 99px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      background: #22c55e;
+      border-radius: 99px;
+      width: 0%;
+      transition: width 0.8s linear;
+    }
+    .loading-time {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.88rem;
+      margin-bottom: 24px;
+    }
+    .loading-status {
+      font-style: italic;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+    }
+
+    /* ============================================================
+       ███  INLINE QUIZ (inside VSL page)
+       ============================================================ */
+    #quiz-inline {
+      display: none;
+      width: 100%;
+      max-width: 800px;
+      margin: 28px auto 0;
+      padding: 0 20px;
+    }
+    .quiz-inline-card {
+      background: linear-gradient(160deg, #5a0e0e 0%, #8b2e1a 45%, #c47a50 100%);
+      border-radius: 18px;
+      padding: 32px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(80,10,10,0.35);
+    }
+
+    /* ============================================================
+       ███  CONGRATS PAGE
+       ============================================================ */
+    #page-congrats {
+      display: none;
+      background: linear-gradient(160deg, #5a0e0e 0%, #8b2e1a 45%, #c47a50 100%);
+      min-height: 100vh;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    #page-congrats.active { display: block; }
+    .congrats-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .congrats-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .congrats-text {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.7;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .congrats-text strong { color: #fff; }
+    .congrats-highlight { color: var(--gold); font-weight: 700; }
+    .congrats-ready { font-size: 1.05rem; margin-top: 4px; margin-bottom: 18px; }
+    .congrats-img-box {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
+    }
+    .congrats-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .btn-unlock {
+      display: inline-block;
+      background: #fde047;
+      color: #111;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.18s, transform 0.15s;
+      width: 100%;
+      max-width: 420px;
+    }
+    .btn-unlock:hover { background: #facc15; transform: scale(1.02); }
+
+    /* ============================================================
+       ███  ETAPA 3 — PÁGINA DE VENDAS
+       ============================================================ */
+    #page-sales {
+      display: none;
+      background: var(--bg);
+    }
+    #page-sales.active { display: block; }
+
+    /* Seções genéricas */
+    .sales-section {
+      padding: 70px 20px;
+    }
+    .sales-section + .sales-section {
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Headline resultado ─────────────────────────── */
+    #section-result {
+      background: linear-gradient(180deg, #0d1f0d 0%, var(--bg) 100%);
+      text-align: center;
+      padding: 70px 20px 50px;
+    }
+    .result-badge {
+      display: inline-block;
+      background: rgba(34,197,94,0.15);
+      border: 1px solid var(--cta);
+      color: var(--cta);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .result-headline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.7rem, 4.5vw, 3rem);
+      font-weight: 900;
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+    .result-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── Oferta ─────────────────────────── */
+    #section-offer {
+      text-align: center;
+      background: var(--bg2);
+    }
+    .offer-product-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .offer-price-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 24px;
+      max-width: 440px;
+      margin: 0 auto 30px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+    .offer-price-from {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .offer-price-strike {
+      font-size: 1.3rem;
+      color: var(--danger);
+      text-decoration: line-through;
+      margin-bottom: 10px;
+    }
+    .offer-price-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .offer-price-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      color: var(--cta);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .offer-installment {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .offer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .offer-badge {
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── Bônus ─────────────────────────── */
+    #section-bonus {
+      background: var(--bg);
+    }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .bonus-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .bonus-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .bonus-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .bonus-info { flex: 1; }
+    .bonus-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .bonus-desc { font-size: 0.88rem; color: var(--muted); margin-bottom: 6px; }
+    .bonus-value {
+      display: inline-block;
+      background: rgba(251,191,36,0.1);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 99px;
+    }
+
+    /* ── Depoimentos ─────────────────────────── */
+    #section-testimonials {
+      background: var(--bg2);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    }
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .testimonial-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cta), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #000;
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .testimonial-stars { color: var(--gold); font-size: 0.9rem; }
+    .testimonial-text {
+      font-size: 0.9rem;
+      color: #ccc;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ── FAQ ─────────────────────────── */
+    #section-faq {
+      background: var(--bg);
+    }
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      text-align: left;
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--cta); }
+    .faq-arrow {
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); color: var(--cta); }
+    .faq-item.open .faq-question { color: var(--cta); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 24px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding: 0 24px 20px;
+    }
+
+    /* ── CTA Final ─────────────────────────── */
+    #section-cta-final {
+      background: linear-gradient(180deg, var(--bg) 0%, #0d1a0d 100%);
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .cta-final-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .cta-final-sub {
+      color: var(--muted);
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Timer */
+    .timer-wrap {
+      margin-bottom: 36px;
+    }
+    .timer-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .timer-display {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 900;
+      color: var(--danger);
+      letter-spacing: 4px;
+      animation: blink 1s infinite;
+    }
+
+    /* ── Media logos ─────────────────────────── */
+    .media-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 14px 18px;
+      padding: 12px 12px 0;
+      max-width: 720px;
+      width: 100%;
+      overflow: hidden;
+    }
+    @media (max-width: 480px) {
+      .media-logos { gap: 8px 12px; padding: 14px 8px 4px; }
+      .logo-nyt { font-size: 0.82rem !important; }
+      .logo-fox { font-size: 1.2rem !important; }
+      .logo-cnn { font-size: 1.2rem !important; }
+      .logo-cbs svg { width: 36px !important; height: 36px !important; }
+      .logo-cbs span { font-size: 1rem !important; }
+      .logo-abc svg { width: 36px !important; height: 36px !important; }
+    }
+    .media-logo {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.82;
+    }
+    .logo-nyt {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #111;
+      white-space: nowrap;
+    }
+    .logo-cbs {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 900;
+      font-size: 1.05rem;
+      color: #111;
+    }
+    .logo-abc {
+      display: flex;
+      align-items: center;
+    }
+    .logo-fox {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: #111;
+      letter-spacing: -1px;
+    }
+    .logo-cnn {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: #cc0000;
+      font-style: italic;
+    }
+
+    /* ── Facebook comments ─────────────────────────── */
+    .fb-comments-wrap {
+      width: 100%;
+      max-width: 100%;
+      padding: 8px 20px 32px;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+    }
+    .fb-comments-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .fb-comments-count {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1c1e21;
+      margin-bottom: 14px;
+    }
+    .fb-comments-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .fb-comment {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+      position: relative;
+    }
+    .fb-comment-reply {
+      padding-left: 50px;
+      background: #fafafa;
+    }
+    .fb-avatar {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ddd;
+    }
+    .fb-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .fb-comment-body {
+      flex: 1;
+    }
+    .fb-comment-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #050505;
+      margin-bottom: 3px;
+    }
+    .fb-comment-name a { color: #1877f2; text-decoration: none; }
+    .fb-comment-text {
+      font-size: 0.84rem;
+      color: #1c1e21;
+      line-height: 1.45;
+      margin-bottom: 5px;
+    }
+    .fb-comment-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      color: #65676b;
+      flex-wrap: wrap;
+    }
+    .fb-comment-actions .fb-act-btn {
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .fb-comment-actions .fb-act-btn:hover { text-decoration: underline; }
+    .fb-likes {
+      font-size: 0.74rem;
+      color: #65676b;
+      white-space: nowrap;
+      margin-left: 6px;
+    }
+    .fb-no-comments {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #cc0000;
+      padding: 14px 0 6px;
+    }
+
+    /* ── Footer ─────────────────────────── */
+    footer {
+      background: #050505;
+      padding: 30px 20px;
+      text-align: center;
+      color: #555;
+      font-size: 0.78rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: #777; text-decoration: none; }
+
+    /* ============================================================
+       RESPONSIVO
+       ============================================================ */
+    @media (max-width: 480px) {
+      .offer-badges { flex-direction: column; align-items: center; }
+      .btn-cta { font-size: 0.95rem; padding: 18px 24px; }
+    }
+
+    /* ============================================================
+       ███  SALES PAGE — NEW COMPLETE STRUCTURE
+       ============================================================ */
+    #page-sales {
+      display: none;
+      background: #f9f9f9;
+    }
+    #page-sales.active { display: block; }
+
+    /* Urgency bar — sticky inside sales page */
+    .urgency-bar {
+      position: sticky;
+      top: 0;
+      z-index: 9990;
+      background: #E8956D;
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+    }
+    .urgency-line1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.72rem, 2vw, 0.92rem);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+    .urgency-line2 {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    #license-count { font-weight: 900; }
+    @keyframes blinkRed {
+      0%, 100% { color: #fff; }
+      50%       { color: #ff3333; }
+    }
+    #license-count.blink-red { animation: blinkRed 1s infinite; }
+
+    /* Sales intro wrapper */
+    .sales-intro-section {
+      background: #f9f9f9;
+      padding: 36px 20px 28px;
+    }
+
+    /* Delivery banner */
+    .delivery-banner {
+      background: #fff;
+      border: 1.5px solid #333;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto 28px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .delivery-banner-icon { font-size: 2rem; flex-shrink: 0; }
+    .delivery-main {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(0.88rem, 2.5vw, 1.05rem);
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    .delivery-note { font-size: 0.76rem; color: #666; line-height: 1.4; }
+
+    /* Offer card */
+    .offer-card-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .offer-card-new {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 100%;
+      max-width: 370px;
+    }
+    .offer-card-top {
+      background: #6B0F1A;
+      color: #fff;
+      text-align: center;
+      padding: 12px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .offer-card-body {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+    .offer-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.05rem;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .offer-card-subtitle { font-size: 0.84rem; color: #555; }
+    .offer-product-img {
+      width: 100%;
+      max-width: 280px;
+      height: 150px;
+      background: linear-gradient(135deg, #22c55e 0%, #fbbf24 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .offer-price-from-new { font-size: 0.84rem; color: #888; }
+    .offer-price-from-new s { color: #aaa; }
+    .offer-price-big {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 3.4rem;
+      color: #22c55e;
+      line-height: 1;
+    }
+    .offer-price-note { font-size: 0.78rem; color: #555; margin-top: -4px; }
+    .offer-checklist {
+      list-style: none;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .offer-checklist li {
+      font-size: 0.86rem;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    .btn-add-cart {
+      display: block;
+      background: #22c55e;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 20px;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(34,197,94,0.4);
+      animation: pulseRing 2s infinite;
+    }
+    .btn-add-cart:hover { background: #16a34a; transform: scale(1.02); }
+    .payment-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .pay-badge {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #333;
+    }
+    .offer-total-line { font-size: 0.78rem; color: #555; }
+    .offer-total-line s { color: #aaa; }
+
+    /* Guarantee section */
+    .guarantee-section-new {
+      background: #6B0F1A;
+      color: #fff;
+      padding: 60px 20px;
+    }
+    .guarantee-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 640px) { .guarantee-inner { grid-template-columns: 1fr; } }
+    .guarantee-left { text-align: center; }
+    .guarantee-medal { font-size: 4rem; display: block; margin-bottom: 12px; }
+    .guarantee-title-new {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .guarantee-subtitle-new { color: #E8956D; font-weight: 700; font-size: 0.95rem; margin-bottom: 14px; }
+    .guarantee-text-new { font-size: 0.86rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
+    .guarantee-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .trust-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 90px;
+    }
+    .trust-badge-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .trust-badge-label { font-size: 0.7rem; font-weight: 700; text-align: center; line-height: 1.3; color: rgba(255,255,255,0.9); }
+
+    /* Bonus section */
+    .bonus-section-new {
+      background: #1a1a1a;
+      padding: 70px 20px;
+    }
+    .bonus-section-title-new {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.2rem, 3.5vw, 1.9rem);
+      font-weight: 900;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .bonus-section-sub-new {
+      color: #E8956D;
+      text-align: center;
+      font-size: 0.93rem;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .bonus-grid-new {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (max-width: 560px) { .bonus-grid-new { grid-template-columns: 1fr; } }
+    .bonus-card-new {
+      background: #3D0A14;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+    .bonus-card-top-new {
+      background: #2a0810;
+      padding: 8px 14px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: #E8956D;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .bonus-img-placeholder {
+      width: 100%;
+      height: 110px;
+      background: linear-gradient(135deg, #6B0F1A 0%, #c47a50 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .bonus-card-body-new { padding: 14px; }
+    .bonus-card-title-new {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.82rem;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .bonus-price-line-new {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .bonus-orig-price-new { font-size: 0.76rem; color: #aaa; text-decoration: line-through; }
+    .bonus-free-new { font-size: 0.8rem; font-weight: 800; color: #22c55e; }
+    .bonus-bullets-new { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .bonus-bullets-new li { font-size: 0.76rem; color: rgba(255,255,255,0.82); line-height: 1.4; }
+
+    /* Reviews section */
+    .reviews-section-new { background: #fff; padding: 70px 20px; }
+    .reviews-title-new {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.1rem, 3vw, 1.7rem);
+      color: #6B0F1A;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .reviews-subtitle-new { text-align: center; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+    .reviews-note-new { text-align: center; font-size: 0.8rem; color: #888; margin-bottom: 36px; }
+    .reviews-list-new {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .review-card-new {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 24px;
+      background: #fafafa;
+    }
+    .review-top-new {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .review-stars-new { color: #f90; font-size: 0.95rem; }
+    .review-headline-new {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.93rem;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    .review-meta-new { font-size: 0.73rem; color: #777; margin-bottom: 12px; line-height: 1.5; }
+    .review-photo-placeholder {
+      width: 100%;
+      height: 130px;
+      background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.76rem;
+      color: #999;
+      margin-bottom: 14px;
+      border: 1px dashed #ccc;
+    }
+    .review-text-new { font-size: 0.86rem; color: #333; line-height: 1.7; margin-bottom: 12px; font-style: italic; }
+    .review-helpful-new {
+      font-size: 0.76rem;
+      color: #777;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .review-btn-new {
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 0.73rem;
+      cursor: pointer;
+      color: #333;
+      font-weight: 600;
+    }
+
+    /* Final CTA */
+    .final-cta-new {
+      background: #6B0F1A;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .final-cta-timer-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .final-cta-countdown {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.4rem, 8vw, 4.2rem);
+      font-weight: 900;
+      color: #ff4444;
+      letter-spacing: 4px;
+      animation: blink 1s infinite;
+      margin-bottom: 32px;
+    }
+    .final-mini-card {
+      background: #fff;
+      border-radius: 14px;
+      max-width: 360px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .final-mini-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.98rem;
+      color: #1a1a1a;
+      text-transform: uppercase;
+    }
+    .final-mini-from { font-size: 0.84rem; color: #888; }
+    .final-mini-from s { color: #aaa; }
+    .final-mini-price {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.6rem;
+      color: #22c55e;
+      line-height: 1;
+    }
+    .btn-final-cta {
+      display: block;
+      background: #22c55e;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 20px;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      transition: background 0.2s;
+      animation: pulseRing 2s infinite;
+    }
+    .btn-final-cta:hover { background: #16a34a; }
+    .final-guarantee-note { font-size: 0.76rem; color: #666; }
+
+    /* ============================================================
+       FAQ SECTION
+       ============================================================ */
+    .faq-section-new {
+      background: #111111;
+      padding: 70px 40px;
+    }
+    .faq-section-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-section-overtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #E8956D;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .faq-section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.3rem, 3.5vw, 2rem);
+      font-weight: 900;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 48px;
+      line-height: 1.3;
+    }
+    .faq-new-item {
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-new-btn {
+      width: 100%;
+      background: #1e1e1e;
+      border: none;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: left;
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: background 0.2s;
+    }
+    .faq-new-btn:hover { background: #252525; }
+    .faq-new-item.open .faq-new-btn {
+      background: #2a1a0e;
+      border-left: 4px solid #E8956D;
+    }
+    .faq-new-arrow {
+      flex-shrink: 0;
+      font-size: 0.85rem;
+      transition: transform 0.3s ease;
+      color: #E8956D;
+    }
+    .faq-new-item.open .faq-new-arrow { transform: rotate(180deg); }
+    .faq-new-answer {
+      background: #2a1a0e;
+      border-left: 4px solid #E8956D;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      padding: 0 24px;
+      color: #d1d5db;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+    .faq-new-item.open .faq-new-answer {
+      max-height: 600px;
+      padding: 16px 24px 22px;
+    }
+    .faq-support-block {
+      text-align: center;
+      margin-top: 48px;
+    }
+    .faq-support-text { color: #9ca3af; font-size: 0.88rem; margin-bottom: 14px; }
+    .btn-support {
+      display: inline-block;
+      border: 2px solid #E8956D;
+      color: #E8956D;
+      background: transparent;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-support:hover { background: #E8956D; color: #fff; }
+
+    /* ============================================================
+       DR. AMANDA BIO SECTION
+       ============================================================ */
+    .bio-section {
+      background: #E8956D;
+      padding: 60px 40px;
+    }
+    .bio-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    @media (max-width: 768px) {
+      .bio-inner { flex-direction: column; }
+      .bio-photo-wrap { width: 100% !important; }
+      .bio-photo-wrap img { width: 100%; }
+    }
+    .bio-photo-wrap {
+      width: 35%;
+      flex-shrink: 0;
+    }
+    .bio-photo-wrap img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      display: block;
+    }
+    .bio-text-wrap { flex: 1; }
+    .bio-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-weight: 900;
+      color: #3D1A0A;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+    .bio-para {
+      font-size: 0.93rem;
+      color: #3D1A0A;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .bio-divider {
+      border: none;
+      border-top: 1px solid #c97a50;
+      margin-bottom: 22px;
+    }
+    .bio-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .bio-cred {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #3D1A0A;
+    }
+    .bio-cred-icon { font-size: 1.1rem; }
+
+    /* ============================================================
+       SCIENTIFIC REFERENCES SECTION
+       ============================================================ */
+    .refs-section {
+      background: #ffffff;
+      padding: 70px 40px;
+    }
+    .refs-inner { max-width: 960px; margin: 0 auto; }
+    .refs-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 400;
+      color: #E8956D;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .refs-subtitle {
+      font-size: 0.88rem;
+      color: #6b7280;
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+    .refs-divider {
+      border: none;
+      border-top: 1px solid #f5c4a8;
+      margin-bottom: 40px;
+    }
+    .refs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 40px;
+    }
+    @media (max-width: 768px) { .refs-grid { grid-template-columns: 1fr; } }
+    .ref-item {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #f0e8e0;
+    }
+    .ref-item:last-child { border-bottom: none; }
+    .ref-number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      color: #1a1a1a;
+      display: inline;
+      transition: color 0.2s;
+    }
+    .ref-item:hover .ref-number { color: #E8956D; }
+    .ref-title {
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      font-style: italic;
+      line-height: 1.5;
+      display: inline;
+    }
+    .ref-source {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+    .refs-disclaimer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 11px;
+      color: #9ca3af;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Social proof toast */
+    #social-proof-wrap {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 9999;
+      width: 300px;
+      pointer-events: none;
+    }
+    @media (max-width: 480px) { #social-proof-wrap { width: 260px; left: 12px; bottom: 12px; } }
+    .sp-toast {
+      background: #fff;
+      border-radius: 12px;
+      border-left: 4px solid #22c55e;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      pointer-events: auto;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateX(-120%);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .sp-toast.show { opacity: 1; transform: translateX(0); }
+    .sp-toast-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .sp-toast-name { font-size: 0.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+    .sp-toast-action { font-size: 0.76rem; color: #555; margin-bottom: 2px; }
+    .sp-toast-verified { font-size: 0.7rem; color: #22c55e; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- ================================================================
+     STEP 1 — VSL
+     ================================================================ -->
+<section id="page-vsl">
+
+  <!-- Newspaper-style header -->
+  <header class="news-header">
+    <span class="news-header-title">HEALTH</span>
+    <span class="news-header-menu">☰</span>
+  </header>
+
+  <!-- News ticker -->
+  <div class="news-ticker">
+    <span class="news-ticker-inner">
+      DAILY UPDATES ON WELLNESS AND HEALTH &nbsp;·&nbsp;
+      DAILY UPDATES ON WELLNESS AND HEALTH &nbsp;·&nbsp;
+      DAILY UPDATES ON WELLNESS AND HEALTH &nbsp;·&nbsp;
+      DAILY UPDATES ON WELLNESS AND HEALTH &nbsp;·&nbsp;
+    </span>
+  </div>
+
+  <!-- Author / Date -->
+  <div class="news-author-wrap">
+    <p class="news-author-name">By Dr. Amanda Johnson</p>
+    <p class="news-author-date" id="news-date">Updated 30 minutes ago · <span id="today-date"></span></p>
+  </div>
+
+  <!-- Editorial warning (main hook) -->
+  <p class="news-warning">
+    <span class="warn-label">WARNING:</span>
+    If you've already taken coconut oil and never lost even a single pound, you're taking it the wrong way.
+  </p>
+
+  <!-- VTurb Player -->
+  <div class="vsl-player-wrap">
+    <!--
+      REPLACE the block below with the real VTurb embed code.
+      Example:
+        <div id="vid_YOUR_ID_HERE"></div>
+        <script src="https://scripts.converteai.net/YOUR_SCRIPT_HERE/player.js" id="scr_YOUR_ID_HERE"></script>
+    -->
+    <div id="vid_YOUR_ID_HERE" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#1a1a1a;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+      <span style="font-size:3rem;">▶️</span>
+      <p style="color:#555;font-size:0.85rem;">Insert your VTurb player embed here</p>
+    </div>
+    <script>
+      /* Paste the VTurb script here: */
+      /* <script src="https://scripts.converteai.net/YOUR_SCRIPT_HERE/player.js" id="scr_YOUR_ID_HERE"><\/script> */
+    </script>
+  </div>
+
+  <!-- Media logos -->
+  <div class="media-logos">
+    <span class="media-logo logo-nyt">The New York Times</span>
+    <span class="media-logo logo-cbs">
+      <svg viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#000"/>
+        <circle cx="30" cy="30" r="10" fill="#fff"/>
+        <circle cx="30" cy="30" r="6" fill="#000"/>
+      </svg>
+      <span style="font-weight:900;font-size:1.4rem;letter-spacing:-0.5px;">CBS</span>
+    </span>
+    <span class="media-logo logo-abc">
+      <svg viewBox="0 0 60 60" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#000"/>
+        <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-family="Arial Black,sans-serif" font-size="20" font-weight="900">abc</text>
+      </svg>
+    </span>
+    <span class="media-logo logo-fox">FOX</span>
+    <span class="media-logo logo-cnn">CNN</span>
+  </div>
+
+  <!-- Inline quiz/loading/congrats (appear below video, same card) -->
+  <div id="quiz-inline">
+
+    <!-- State 1: Quiz questions -->
+    <div class="quiz-inline-card" id="quiz-state">
+      <div class="quiz-header">
+        <h2 class="quiz-title">Generate Your Personalized <span class="quiz-title-highlight">Cocoburn</span> Protocol</h2>
+        <p class="quiz-subtitle">Answer these quick questions so we can create a personalized Cocoburn solution, tailored to your body, your goals, and your unique journey.</p>
+      </div>
+      <p class="quiz-question-text" id="quiz-question-text"></p>
+      <div class="quiz-options" id="quiz-options"></div>
+      <div class="quiz-nav" id="quiz-nav">
+        <button class="quiz-prev-btn" id="quiz-prev-btn" onclick="prevQuestion()" style="display:none">← Previous</button>
+        <button class="btn-generate" id="btn-generate" onclick="submitQuiz()" style="display:none">Generate My Protocol</button>
+      </div>
+    </div>
+
+    <!-- State 2: Loading -->
+    <div class="quiz-inline-card" id="loading-state" style="display:none; justify-content:center;">
+      <h2 class="loading-title">Generating Your Personalized Ketogenic Protocol...</h2>
+      <p class="loading-subtitle">
+        Please wait just a few moments while we engineer the ideal metabolic sequence for your body.
+        We'll fine-tune every phase of the protocol to ensure you reach
+        <span class="hl-gold">instant ketosis</span> and get the results
+        <span class="hl-white">you've been craving</span>—starting from Day One!
+      </p>
+      <div class="loading-bar-bg">
+        <div class="loading-bar-fill" id="loading-bar-fill"></div>
+      </div>
+      <p class="loading-time" id="loading-time">Time remaining: 10 seconds</p>
+      <p class="loading-status"><em><strong>Analyzing metabolic profile and fat-burning potential...</strong></em></p>
+    </div>
+
+    <!-- State 3: Congratulations -->
+    <div class="quiz-inline-card" id="congrats-state" style="display:none;">
+      <h2 class="congrats-title">Congratulations!</h2>
+      <p class="congrats-text">Your <span class="congrats-highlight">Customized Cocoburn Ketogenic Protocol</span> is ready — and it's been specifically engineered based on your profile to help you force instant ketosis and reach your weight goals faster than ever!</p>
+      <p class="congrats-text">And there's more: By securing your access today, you unlock our <strong>MEGA EXCLUSIVE</strong> discount — and get full <strong>LIFETIME ACCESS</strong> for just $19.</p>
+      <p class="congrats-text">No more yo-yo dieting. No more wasted effort!</p>
+      <p class="congrats-text congrats-ready"><strong>Ready to start?</strong></p>
+      <div class="congrats-img-box">
+        <img src="./dr-amanda.jpg" alt="Dr. Amanda Johnson">
+      </div>
+      <button class="btn-unlock" onclick="showSalesPage()">
+        Unlock my discount and Lifetime Protocol now!
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STEP 2 — Quiz is now inline inside #page-vsl above -->
+
+<!-- Loading and Congrats are now inline inside #quiz-inline above -->
+
+<!-- ================================================================
+     STEP 3 — FINAL SALES PAGE
+     ================================================================ -->
+<div id="page-sales">
+
+  <!-- BLOCK 1 — URGENCY BAR (sticky top) -->
+  <div class="urgency-bar">
+    <p class="urgency-line1">Choose Your Discounted Cocoburn Ketogenic Protocol With Our Special Time-Limited Offer!</p>
+    <p class="urgency-line2">🔴 Cocoburn Licenses Remaining: <strong id="license-count">84</strong></p>
+  </div>
+
+  <!-- BLOCK 2 — DELIVERY BANNER + BLOCK 3 — OFFER CARD -->
+  <div class="sales-intro-section">
+
+    <div class="delivery-banner">
+      <span class="delivery-banner-icon">📩</span>
+      <div>
+        <p class="delivery-main">Enjoy <strong>IMMEDIATE DELIVERY</strong> to your registered email!</p>
+        <p class="delivery-note">*For long-term results, we recommend completing the full 90-day protocol</p>
+      </div>
+    </div>
+
+    <div class="offer-card-wrap">
+      <div class="offer-card-new">
+        <div class="offer-card-top">⭐ BEST VALUE — LIMITED TIME OFFER ⭐</div>
+        <div class="offer-card-body">
+          <p class="offer-card-title">COCOBURN KETOGENIC PROTOCOL</p>
+          <p class="offer-card-subtitle">Your Personalized Lifetime Access</p>
+          <img src="./cocoburn_ketogenic_protocol.png" alt="Cocoburn Ketogenic Protocol" style="width:100%;max-width:280px;border-radius:10px;">
+          <p class="offer-price-from-new">From: <s>$586</s></p>
+          <p class="offer-price-big">$19</p>
+          <p class="offer-price-note">One-time payment — Lifetime Access</p>
+          <ul class="offer-checklist">
+            <li>✅ Save $567 Today!</li>
+            <li>✅ Lifetime Access — Pay Once, Use Forever</li>
+            <li>✅ 30-Day Money-Back Guarantee</li>
+            <li>✅ 5 Free Exclusive Bonuses Included!</li>
+            <li>✅ Immediate Delivery to Your Email</li>
+          </ul>
+          <a href="https://pay.mycheckoutt.com/019d45c4-14a5-707f-b386-edd507dfc6c6?ref=" class="btn-add-cart" target="_blank" rel="noopener">
+            GET LIFETIME ACCESS FOR JUST $19!
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BLOCK 4 — GUARANTEE + TRUST BADGES -->
+  <div class="guarantee-section-new">
+    <div class="guarantee-inner">
+      <div class="guarantee-left">
+        <img src="./satisfacao-garantida.png" alt="Satisfação Garantida" style="width:110px;height:110px;object-fit:contain;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;">
+        <h3 class="guarantee-title-new">100% Satisfaction or Your Money Back</h3>
+        <p class="guarantee-subtitle-new">30-Day Unconditional Guarantee</p>
+        <p class="guarantee-text-new">We believe in the quality of Cocoburn Ketogenic Protocol. If for any reason you are not completely satisfied within 30 days of purchase, simply contact our team and we will refund you — no questions asked.</p>
+      </div>
+      <div class="guarantee-right">
+        <div class="trust-badge">
+          <img src="./pagamento-seguro.png" alt="Secure Payment" style="width:60px;height:60px;object-fit:contain;">
+          <span class="trust-badge-label">Secure Payment</span>
+        </div>
+        <div class="trust-badge">
+          <img src="./entrega-imediata.png" alt="Immediate Delivery" style="width:60px;height:60px;object-fit:contain;">
+          <span class="trust-badge-label">Immediate Delivery</span>
+        </div>
+        <div class="trust-badge">
+          <img src="./satisfacao-garantida.png" alt="Satisfaction Guaranteed" style="width:60px;height:60px;object-fit:contain;">
+          <span class="trust-badge-label">Satisfaction Guaranteed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 5 — BONUSES -->
+  <div class="bonus-section-new">
+    <h2 class="bonus-section-title-new">🎁 Transform Your Body Faster With Your Cocoburn Protocol</h2>
+    <p class="bonus-section-sub-new">And unlock over $156 in exclusive bonuses — absolutely FREE!</p>
+    <div class="bonus-grid-new">
+
+      <div class="bonus-card-new">
+        <div class="bonus-card-top-new">FREE BONUS #1</div>
+        <img src="./victorias-secret-method.png" alt="The Victoria's Secret Method" style="width:100%;display:block;">
+        <div class="bonus-card-body-new">
+          <p class="bonus-card-title-new">THE VICTORIA'S SECRET METHOD IN 45 DAYS</p>
+          <div class="bonus-price-line-new">
+            <span class="bonus-orig-price-new">$20/month</span>
+            <span class="bonus-free-new">→ TODAY: FREE!</span>
+          </div>
+          <ul class="bonus-bullets-new">
+            <li>✅ A secret lesson to reshape your waist without dieting or waist trainers</li>
+            <li>✅ Shape your belly at home in just two minutes a day</li>
+            <li>✅ Visible results in 45 days — no gym equipment required</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bonus-card-new">
+        <div class="bonus-card-top-new">FREE BONUS #2</div>
+        <img src="./mediterranean-cocktail-formula.png" alt="The Mediterranean Cocktail Formula" style="width:100%;display:block;">
+        <div class="bonus-card-body-new">
+          <p class="bonus-card-title-new">THE MEDITERRANEAN COCKTAIL FORMULA</p>
+          <div class="bonus-price-line-new">
+            <span class="bonus-orig-price-new">$39</span>
+            <span class="bonus-free-new">→ TODAY: FREE!</span>
+          </div>
+          <ul class="bonus-bullets-new">
+            <li>✅ An ancient elixir for firm, toned legs</li>
+            <li>✅ Eliminate spider veins and fluid retention naturally</li>
+            <li>✅ Centuries-old Mediterranean secret — now available to you</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bonus-card-new">
+        <div class="bonus-card-top-new">FREE BONUS #3</div>
+        <img src="./korean-avocado-technique.png" alt="The Secret to Eliminating Facial Dark Spots" style="width:100%;display:block;">
+        <div class="bonus-card-body-new">
+          <p class="bonus-card-title-new">THE SECRET TO ELIMINATING FACIAL DARK SPOTS</p>
+          <div class="bonus-price-line-new">
+            <span class="bonus-orig-price-new">$19/month</span>
+            <span class="bonus-free-new">→ TODAY: FREE!</span>
+          </div>
+          <ul class="bonus-bullets-new">
+            <li>✅ The Korean secret to removing skin discoloration in 60 seconds</li>
+            <li>✅ The avocado technique — 100% natural and dermatologist-inspired</li>
+            <li>✅ Brighter, more even skin tone without expensive treatments</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bonus-card-new">
+        <div class="bonus-card-top-new">FREE BONUS #4</div>
+        <img src="./5-minute-ice-technique.png" alt="20 Ways to Speed Up Your Metabolism" style="width:100%;display:block;">
+        <div class="bonus-card-body-new">
+          <p class="bonus-card-title-new">20 WAYS TO SPEED UP YOUR METABOLISM</p>
+          <div class="bonus-price-line-new">
+            <span class="bonus-orig-price-new">$49</span>
+            <span class="bonus-free-new">→ TODAY: FREE!</span>
+          </div>
+          <ul class="bonus-bullets-new">
+            <li>✅ Learn how to double your calorie burn at rest</li>
+            <li>✅ The revolutionary five-minute ice technique for accelerated fat loss</li>
+            <li>✅ Simple daily habits that keep your metabolism high 24/7</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bonus-card-new" style="grid-column:1/-1;max-width:380px;margin:0 auto;width:100%;">
+        <div class="bonus-card-top-new">FREE BONUS #5</div>
+        <img src="./diabetes-collagen-guide.png" alt="The Diabetes &amp; Collagen Guide" style="width:100%;display:block;">
+        <div class="bonus-card-body-new">
+          <p class="bonus-card-title-new">THE DIABETES &amp; COLLAGEN GUIDE</p>
+          <div class="bonus-price-line-new">
+            <span class="bonus-orig-price-new">$29</span>
+            <span class="bonus-free-new">→ TODAY: FREE!</span>
+          </div>
+          <ul class="bonus-bullets-new">
+            <li>✅ Nine recipes to manage blood sugar using apple cider vinegar</li>
+            <li>✅ Aloe vera skin hydration protocol for collagen production</li>
+            <li>✅ Control cravings and energy crashes naturally</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BLOCK 6 — REVIEWS -->
+  <div class="reviews-section-new">
+    <h2 class="reviews-title-new">What People Are Saying About Cocoburn Ketogenic Protocol?</h2>
+    <p class="reviews-subtitle-new">Real Life-Changing Results!</p>
+    <p class="reviews-note-new">Top reviews from the United States</p>
+    <div class="reviews-list-new">
+
+      <div class="review-card-new">
+        <div class="review-top-new">
+          <div>
+            <p class="review-stars-new">★★★★★</p>
+            <p class="review-headline-new">I dropped 32 lbs in 5 weeks</p>
+          </div>
+          <span style="font-size:0.73rem;color:#888;">Lisa M., Montclair, NJ</span>
+        </div>
+        <p class="review-meta-new">Reviewed in the United States on January 15, 2025 | Purchased Cocoburn Ketogenic Protocol | ✅ Verified Purchase</p>
+        <img src="./before-after-1.jpeg" alt="Lisa M. Before and After" style="width:100%;border-radius:8px;margin-bottom:14px;display:block;">
+        <p class="review-text-new">"I used to hide from social gatherings because I felt so self-conscious, but after just a couple weeks on Cocoburn Ketogenic Protocol I'm down 30+ pounds and I'm actually smiling when I look in the mirror. This is hands-down the best decision I've made in years."</p>
+        <div class="review-helpful-new">
+          <span>26 people found this helpful</span>
+          <button class="review-btn-new">Helpful</button>
+          <button class="review-btn-new">Share</button>
+        </div>
+      </div>
+
+      <div class="review-card-new">
+        <div class="review-top-new">
+          <div>
+            <p class="review-stars-new">★★★★★</p>
+            <p class="review-headline-new">In just two months, I've lost 47 pounds</p>
+          </div>
+          <span style="font-size:0.73rem;color:#888;">Susan R., Boulder, CO</span>
+        </div>
+        <p class="review-meta-new">Reviewed in the United States on January 12, 2025 | ✅ Verified Purchase</p>
+        <img src="./before-after-2.jpeg" alt="Susan R. Before and After" style="width:100%;border-radius:8px;margin-bottom:14px;display:block;">
+        <p class="review-text-new">"Honestly, I was super skeptical at first. I've tried so many miracle products that did absolutely nothing. But Cocoburn Ketogenic Protocol totally shocked me. I've lost 47 pounds in just 2 months, my cravings are basically gone, and I wake up with way more energy than I've had in years."</p>
+        <div class="review-helpful-new">
+          <span>21 people found this helpful</span>
+          <button class="review-btn-new">Helpful</button>
+          <button class="review-btn-new">Share</button>
+        </div>
+      </div>
+
+      <div class="review-card-new">
+        <div class="review-top-new">
+          <div>
+            <p class="review-stars-new">★★★★★</p>
+            <p class="review-headline-new">I'm already 25 pounds lighter</p>
+          </div>
+          <span style="font-size:0.73rem;color:#888;">Betty B., Charleston, SC</span>
+        </div>
+        <p class="review-meta-new">Reviewed in the United States on January 8, 2025 | ✅ Verified Purchase</p>
+        <p class="review-text-new">"Being obese made even simple things feel impossible. Now just two weeks into Cocoburn Ketogenic Protocol, I'm already 25 pounds down and have the energy to run around with my family. I got my joy back and this protocol was a huge part of that."</p>
+        <div class="review-helpful-new">
+          <span>22 people found this helpful</span>
+          <button class="review-btn-new">Helpful</button>
+          <button class="review-btn-new">Share</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BLOCK 7 — FINAL CTA WITH TIMER -->
+  <div class="final-cta-new">
+    <p class="final-cta-timer-label">⚠️ This offer expires in:</p>
+    <p class="final-cta-countdown" id="final-countdown">15:00</p>
+    <div class="final-mini-card">
+      <p class="final-mini-title">COCOBURN KETOGENIC PROTOCOL</p>
+      <p class="final-mini-from">From: <s>$586</s></p>
+      <p class="final-mini-price">$19</p>
+      <a href="https://pay.mycheckoutt.com/019d45c4-14a5-707f-b386-edd507dfc6c6?ref=" class="btn-final-cta" target="_blank" rel="noopener">
+        ✅ YES! I WANT INSTANT ACCESS NOW
+      </a>
+      <p class="final-guarantee-note">🔒 30-Day Money-Back Guarantee | Immediate Email Delivery</p>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="faq-section-new">
+    <div class="faq-section-inner">
+      <p class="faq-section-overtitle">FREQUENTLY ASKED QUESTIONS</p>
+      <h2 class="faq-section-title">Everything You Need to Know Before Getting Started</h2>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          What exactly is the Cocoburn Ketogenic Protocol?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">The Cocoburn Ketogenic Protocol is a 100% digital, science-based system developed by Dr. Amanda Johnson — a Stanford-trained nutrition specialist who spent 8 years researching metabolic health in the Philippines. The protocol combines the fat-burning power of Filipino coconut oil's ultra-concentrated MCTs with Swiss metabolic technology to trigger instant, natural ketosis in your body — in as little as 30 to 60 minutes — without cutting carbs, without fasting, and without gym workouts. It's a simple 10-second morning ritual that forces your body to stop burning glucose and start burning stored fat 24 hours a day, just like it did when you were 25.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          Is this safe? Are there any side effects?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">Absolutely safe. Unlike Ozempic, Mounjaro, or other weight loss injections that can cause nausea, vomiting, gastric paralysis, and pancreatitis, the Cocoburn Ketogenic Protocol is 100% natural. You are simply providing your body with the MCTs it needs to trigger a metabolic process it was always designed to perform. There are no needles, no pills dissolved in stomach acid, no chemical compounds. Thousands of women over 38 have followed this protocol with zero adverse effects. However, if you have a serious medical condition, we recommend consulting your doctor before starting any new health program.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          I've tried everything — keto, fasting, calorie counting. Why would this be any different?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">We hear this all the time, and the answer lies in the root cause. Traditional diets like keto or fasting try to force your body into ketosis through suffering and extreme restriction — and they have an 80% dropout rate because they are biologically unsustainable. The moment you eat normally again, your body snaps back to glucose mode and you regain all the weight. The Cocoburn Protocol is different because it doesn't fight your biology — it works with it. The specific MCT concentration triggers ketosis chemically, through your liver, in 30 minutes — regardless of what you ate the night before. You stay in fat-burning mode without restriction. That's why women who failed at every diet for years are losing 40, 50, 60+ pounds with this protocol.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          How quickly will I see results?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">Most women notice reduced bloating and lower hunger within the first 3 to 5 days of the morning ritual. By the end of the first week, the scale starts moving. In the first 14 days, clinical results show an average of 14 to 18 pounds lost. By the end of 3 months, women following the full protocol report losses between 40 and 65 pounds — without giving up pizza, wine, or their favorite foods. Individual results vary based on age, starting weight, and consistency, but the 30-day money-back guarantee means you can verify this for yourself with zero financial risk.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          Do I need to follow a strict diet or exercise while using the protocol?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">No — and that's the entire point. The Cocoburn Ketogenic Protocol was specifically designed for busy women who have families, jobs, and real lives. You don't need to cut carbs, count calories, or set foot in a gym. The 10-second morning ritual forces your body into ketosis on its own. Women in the program report eating pizza on weekends, drinking wine with friends, and having dessert — while their bodies continue burning fat around the clock. Of course, maintaining a generally balanced lifestyle will accelerate your results, but no extreme restriction is required.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          Is $19 really the final price? Why is it so affordable?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">Yes — $19 is the real promotional price for Lifetime Access, and here's why it's this low: the Cocoburn Ketogenic Protocol is a digital system. There are no pills to manufacture, no bottles to ship, no middlemen to pay. Dr. Amanda removed every intermediary to make this accessible to women who have already spent thousands on diets, gym memberships, and injections that didn't work. This price is only available for the first batch of Lifetime Access licenses. Once the promotional slots fill up, the price returns to its full value of $499. If you see the $19 button active, you're still in time.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          What happens right after I purchase? How do I access the protocol?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">Access is 100% immediate and digital. The moment your payment is confirmed, you receive an email to your registered address with your full access link — no waiting, no shipping, no delays. You can start your first morning ritual as soon as today. The protocol is accessible on any device — smartphone, tablet, or computer — and your Lifetime Access means you can return to it whenever you need, forever, with no additional charges.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          What if it doesn't work for me? Is there a guarantee?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">Yes — and it's completely unconditional. You have 30 full days to follow the Cocoburn Ketogenic Protocol and verify the results in your own body. If for any reason you are not satisfied — no weight loss, no energy improvement, any reason at all — simply send an email to our support team and you will receive a 100% refund. No questions asked, no hoops to jump through. Dr. Amanda stands behind this protocol completely because she has seen it transform thousands of lives. Your investment is 100% risk-free.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          Is this only for women over 38? Can younger women and men use it?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">The Cocoburn Ketogenic Protocol was specifically developed for women over 38 because that's when the metabolic shift happens — estrogen drops, insulin sensitivity decreases, and the body gets stuck in glucose mode. That said, the underlying science of MCT-induced ketosis works for any adult. Younger women dealing with post-pregnancy weight, metabolic resistance, or hormonal imbalances have also reported excellent results. The protocol is not recommended for pregnant or breastfeeding women, or for children.</div>
+      </div>
+
+      <div class="faq-new-item">
+        <button class="faq-new-btn" onclick="toggleFaqNew(this)">
+          Why haven't I heard of this before? Why don't doctors talk about it?
+          <span class="faq-new-arrow">▼</span>
+        </button>
+        <div class="faq-new-answer">Pharmaceutical companies generate over $100 billion a year from weight loss injections like Ozempic and Mounjaro. A natural, one-time $19 solution that produces similar results is their worst nightmare. Dr. Amanda Johnson witnessed this firsthand — she worked alongside the pharmaceutical research teams behind these drugs and left precisely because she refused to participate in creating lifelong dependency. The Cocoburn Protocol uses a mechanism the industry has known about for decades but actively suppresses because it eliminates the need for their recurring revenue. That's why it's only available on this official page, without retail distribution.</div>
+      </div>
+
+      <div class="faq-support-block">
+        <p class="faq-support-text">Still have questions? Our support team is available 24/7.</p>
+        <a href="mailto:cocoburnketoprotocol@gmail.com" class="btn-support">📩 Contact Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DR. AMANDA BIO SECTION -->
+  <div class="bio-section">
+    <div class="bio-inner">
+      <div class="bio-photo-wrap">
+        <img src="./dr-amanda.jpg" alt="Dr. Amanda Johnson">
+      </div>
+      <div class="bio-text-wrap">
+        <h2 class="bio-title">Who Is Dr. Amanda Johnson?</h2>
+        <p class="bio-para">Dr. Amanda Johnson is a nutritionist trained at Stanford University, with eight years of clinical and research experience at a renowned hospital in the Philippines. During her career, she delved into the study of metabolic diseases and participated in research related to the development of weight-loss medications for the pharmaceutical industry, such as Ozempic and Mounjaro. Her journey took a personal turn when she decided to investigate natural fat-burning methods to help her sister, Sarah, overcome severe obesity and depression. Based on her observations of the Filipino diet and studies on medium-chain triglycerides (MCTs), she developed the "coconut oil trick," which gave rise to the Cocoburn Ketogenic Protocol — focused on inducing instant ketosis without dietary restrictions.</p>
+        <hr class="bio-divider">
+        <div class="bio-credentials">
+          <span class="bio-cred"><span class="bio-cred-icon">🎓</span> Stanford University — Nutrition Specialist</span>
+          <span class="bio-cred"><span class="bio-cred-icon">🏥</span> 8 Years Clinical Research — Manila, Philippines</span>
+          <span class="bio-cred"><span class="bio-cred-icon">🔬</span> MCT &amp; Metabolic Ketosis Researcher</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCIENTIFIC REFERENCES SECTION -->
+  <div class="refs-section">
+    <div class="refs-inner">
+      <h2 class="refs-title">Scientific References</h2>
+      <p class="refs-subtitle">The Cocoburn Ketogenic Protocol is grounded in peer-reviewed research published in leading scientific journals.</p>
+      <hr class="refs-divider">
+      <div class="refs-grid">
+
+        <div class="ref-item">
+          <p><span class="ref-number">1. </span><span class="ref-title">"Phytosterols and Their Role in Reducing Adiposity and Cardiometabolic Risk"</span></p>
+          <p class="ref-source">– Jones PJ, et al. (Journal of Nutritional Biochemistry, 2017)</p>
+        </div>
+
+        <div class="ref-item">
+          <p><span class="ref-number">2. </span><span class="ref-title">"Christensenella minuta: A Key Bacterium for Lean Phenotype and Metabolic Health"</span></p>
+          <p class="ref-source">– Goodrich JK, et al. (Cell, 2014)</p>
+        </div>
+
+        <div class="ref-item">
+          <p><span class="ref-number">3. </span><span class="ref-title">"Twin Studies of Gut Microbiota: Insights into Obesity and Metabolic Disorders"</span></p>
+          <p class="ref-source">– Turnbaugh PJ, et al. (Proceedings of the National Academy of Sciences, 2010)</p>
+        </div>
+
+        <div class="ref-item">
+          <p><span class="ref-number">4. </span><span class="ref-title">"Comprehensive Review of Green Tea Extract on Energy Expenditure and Fat Oxidation"</span></p>
+          <p class="ref-source">– Hsu C, et al. (Journal of the International Society of Sports Nutrition, 2013)</p>
+        </div>
+
+        <div class="ref-item">
+          <p><span class="ref-number">5. </span><span class="ref-title">"Vitamin D3 and Insulin Sensitivity: Implications for Weight Control and Metabolic Syndrome"</span></p>
+          <p class="ref-source">– Pittas AG, et al. (Diabetes Care, 2014)</p>
+        </div>
+
+        <div class="ref-item">
+          <p><span class="ref-number">6. </span><span class="ref-title">"Gut Microbiota Manipulation for Weight Management: The Emerging Evidence"</span></p>
+          <p class="ref-source">– Clarke G, et al. (Nutrition &amp; Metabolism, 2019)</p>
+        </div>
+
+      </div>
+      <p class="refs-disclaimer">* These references are provided for educational purposes. The Cocoburn Ketogenic Protocol is a digital educational product and is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary.</p>
+    </div>
+  </div>
+
+</div><!-- /#page-sales -->
+
+<!-- ================================================================
+     FACEBOOK COMMENTS — always visible, always last
+     ================================================================ -->
+<div class="fb-comments-wrap">
+<div class="fb-comments-inner">
+  <p class="fb-comments-count">3,158 Comments</p>
+  <div class="fb-comments-list">
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=5" alt="Abigail Walker"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Abigail Walker</p>
+        <p class="fb-comment-text">I swear I thought it was just another one of those loooong, boring vids. Congrats, Dr. Amanda, for sharing something that actually WORKS!</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>2h</span><span class="fb-likes">👍 10 &nbsp;❤️ 23</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=10" alt="Katherine Lewis"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Katherine Lewis</p>
+        <p class="fb-comment-text">Dr. Amanda is amazingggg 🏆</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>35 min</span><span class="fb-likes">👍 10 &nbsp;❤️ 17</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=9" alt="Victoria Clark"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Victoria Clark</p>
+        <p class="fb-comment-text">It's not just about the numbers. I feel more comfortable in my own skin, and that's something I haven't felt in a long time.</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>7 min</span><span class="fb-likes">👍 10 &nbsp;❤️ 11</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=20" alt="Sarah Smith"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Sarah Smith</p>
+        <p class="fb-comment-text">Lol same here! My hubby thought I was ill 'cause I started eating half of what I used to overnight 😂</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>5 min</span><span class="fb-likes">👍 10 &nbsp;❤️ 6</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=25" alt="Suzy Green"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Suzy Green</p>
+        <p class="fb-comment-text">I dunno guys, is it legit or just marketing hype??</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>1h</span><span class="fb-likes">👍 10 &nbsp;❤️ 54</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment fb-comment-reply">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=30" alt="Alyssa Stewart"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Alyssa Stewart</p>
+        <p class="fb-comment-text">Suzy, I was super skeptical too, but it's real. Give it a try for a few days and see. I was shocked how fast it worked for me</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>1h</span><span class="fb-likes">👍 10 &nbsp;❤️ 76</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=16" alt="Jessica Baker"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Jessica Baker</p>
+        <p class="fb-comment-text">I was unsure at first too, but now I'm feeling amazing! It's like my body and mind hit the reset button, haha.</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>1h</span><span class="fb-likes">👍 10 &nbsp;❤️ 59</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=35" alt="Amanda Miller"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Amanda Miller</p>
+        <p class="fb-comment-text">Congrats, Dr. Amanda! With so many scams online, it's rare to see something that's actually helpful. You deserve all the success and more 🙌 💛</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>19 min</span><span class="fb-likes">👍 10 &nbsp;❤️ 35</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=40" alt="Rachel Thomas"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Rachel Thomas</p>
+        <p class="fb-comment-text">Honestly, I've tried everything—methods, tips, strategies… but nothing had such a positive impact like what I learned from you. I feel lighter, more energized, and full of life. Thank you, Dr. Johnson 😍</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>2h</span><span class="fb-likes">👍 10 &nbsp;❤️ 67</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=45" alt="Lisa Walker"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Lisa Walker</p>
+        <p class="fb-comment-text">Oh my God, same here! I was so tired of quick fixes!</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>2h</span><span class="fb-likes">👍 10 &nbsp;❤️ 44</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=50" alt="Donna Clark"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Donna Clark</p>
+        <p class="fb-comment-text">Has anyone else tried this? Or am I just the only one believing in internet miracles? 😅</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>2h</span><span class="fb-likes">👍 10 &nbsp;❤️ 57</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment fb-comment-reply">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=19" alt="Veronica Escher"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Veronica Escher</p>
+        <p class="fb-comment-text">I tried it with no expectations, but now I'm shocked! Just one week and I already feel like a new person — I don't even know what's happening, I'm just going with it 😊</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>1h</span><span class="fb-likes">👍 10 &nbsp;❤️ 64</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=21" alt="Savannah Perry"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Savannah Perry</p>
+        <p class="fb-comment-text">It really works. Been using it for 2 months, and I feel like a NEW person. Way less hungry, less stress, less cravings… it's a total game changer.</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>2h</span><span class="fb-likes">👍 10 &nbsp;❤️ 39</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment fb-comment-reply">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=30" alt="Alyssa Stewart"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Alyssa Stewart</p>
+        <p class="fb-comment-text">Sameee! Started yesterday, not hungry at ALL. It's literally like flipping a switch 🤯</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>2h</span><span class="fb-likes">👍 10 &nbsp;❤️ 37</span></div>
+      </div>
+    </div>
+
+    <div class="fb-comment">
+      <div class="fb-avatar"><img src="https://i.pravatar.cc/80?img=47" alt="Hailey Foster"></div>
+      <div class="fb-comment-body">
+        <p class="fb-comment-name">Hailey Foster</p>
+        <p class="fb-comment-text">Dr. Johnson, always nails it and says what no one else dares to! You're my inspo ❤️ I'm keep doing the recipe cause I'm finally fitting back into my old clothes haha</p>
+        <div class="fb-comment-actions"><span class="fb-act-btn">Like</span><span>·</span><span class="fb-act-btn">Reply</span><span>·</span><span>1h</span><span class="fb-likes">👍 10 &nbsp;❤️ 32</span></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="fb-no-comments">This post is no longer receiving comments.</p>
+</div><!-- /.fb-comments-inner -->
+</div><!-- /.fb-comments-wrap -->
+
+<footer>
+  <p>© 2025 Cocoburn Ketogenic Protocol. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="#">Terms of Use</a> &nbsp;|&nbsp;
+    <a href="#">Contact</a>
+  </p>
+  <p style="margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;">
+    Results described are individual and may vary. This product does not guarantee specific results.
+  </p>
+</footer>
+
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script>
+  /* ============================================================
+     CONFIGURATION — EDIT HERE
+     ============================================================ */
+  const CONFIG = {
+    VSL_BTN_DELAY : 30,     // seconds until the VSL button appears
+    TIMER_MINUTES : 15,     // minutes for the countdown timer
+  };
+
+  /* ── Dynamic date ── */
+  (function () {
+    var months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+    var d = new Date();
+    var formatted = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    var el = document.getElementById('today-date');
+    if (el) el.textContent = formatted;
+  })();
+
+  /* ============================================================
+     QUIZ QUESTIONS — EDIT HERE
+     ============================================================ */
+  const questions = [
+    {
+      id: 'q1',
+      text: 'How old are you?',
+      type: 'single',
+      options: [
+        'Less than 20 years old',
+        '20 to 29 years old',
+        '30 to 39 years old',
+        '40 to 49 years old',
+        '50 to 59 years old',
+        '60 years old or more',
+      ]
+    },
+    {
+      id: 'q2',
+      text: "What's your current weight?",
+      type: 'single',
+      options: [
+        'Less than 120 lbs (54 kg)',
+        '121 to 140 lbs (55–63 kg)',
+        '141 to 160 lbs (64–72 kg)',
+        '161 to 180 lbs (73–81 kg)',
+        '181 to 200 lbs (82–90 kg)',
+        'More than 200 lbs (91+ kg)',
+      ]
+    },
+    {
+      id: 'q3',
+      text: "What's your height?",
+      type: 'single',
+      options: [
+        'Less than 4\'9" (145 cm)',
+        '4\'9" to 5\'2" (145–157 cm)',
+        '5\'2" to 5\'5" (157–165 cm)',
+        '5\'5" to 5\'9" (165–175 cm)',
+        'More than 5\'9" (175+ cm)',
+      ]
+    },
+    {
+      id: 'q4',
+      text: 'How many pounds would you like to lose?',
+      type: 'single',
+      options: [
+        'Less than 10 lbs (4 kg)',
+        '10 to 20 lbs (5–9 kg)',
+        '21 to 30 lbs (10–13 kg)',
+        '31 to 50 lbs (14–22 kg)',
+        'More than 50 lbs (23+ kg)',
+        "I don't have a number in mind",
+      ]
+    },
+    {
+      id: 'q5',
+      text: 'Which parts do you want to lose fat from?',
+      type: 'multi',
+      options: ['Abdomen','Sides','Arms','Hips','Legs','Other areas']
+    },
+  ];
+
+  /* ============================================================
+     ANSWERS OBJECT — stored for future conditional logic
+     ============================================================ */
+  const quizAnswers = {};
+
+  /* ============================================================
+     STEP 1 — VSL: after delay → go directly to quiz
+     ============================================================ */
+  setTimeout(function () {
+    goToQuiz();
+  }, CONFIG.VSL_BTN_DELAY * 1000);
+
+  /* ============================================================
+     SCREEN TRANSITIONS
+     ============================================================ */
+  function fadeOut(el, cb) {
+    el.style.transition = 'opacity 0.5s';
+    el.style.opacity = '0';
+    setTimeout(function () {
+      el.style.display = 'none';
+      el.style.opacity = '';
+      el.style.transition = '';
+      if (cb) cb();
+    }, 500);
+  }
+
+  function fadeIn(el) {
+    el.style.opacity = '0';
+    el.style.display = 'flex';
+    requestAnimationFrame(function () {
+      el.style.transition = 'opacity 0.6s';
+      el.style.opacity = '1';
+      setTimeout(function () { el.style.transition = ''; }, 600);
+    });
+  }
+
+  function fadeInBlock(el) {
+    el.style.opacity = '0';
+    el.style.display = 'block';
+    requestAnimationFrame(function () {
+      el.style.transition = 'opacity 0.6s';
+      el.style.opacity = '1';
+      setTimeout(function () { el.style.transition = ''; }, 600);
+    });
+  }
+
+  /* ============================================================
+     STEP 1 → 2: show inline quiz below video
+     ============================================================ */
+  function goToQuiz() {
+    const inlineQuiz = document.getElementById('quiz-inline');
+    inlineQuiz.style.opacity = '0';
+    inlineQuiz.style.display = 'block';
+    renderQuestion(0);
+    requestAnimationFrame(function () {
+      inlineQuiz.style.transition = 'opacity 0.6s';
+      inlineQuiz.style.opacity = '1';
+      setTimeout(function () {
+        inlineQuiz.style.transition = '';
+        inlineQuiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 600);
+    });
+  }
+
+  /* ============================================================
+     STEP 2 — QUIZ
+     ============================================================ */
+  let currentQuestion = 0;
+
+  function renderQuestion(index) {
+    const q = questions[index];
+    const qText = document.getElementById('quiz-question-text');
+    const qOpts = document.getElementById('quiz-options');
+    const prevBtn = document.getElementById('quiz-prev-btn');
+    const genBtn  = document.getElementById('btn-generate');
+
+    // Previous button: show from step 2 onward
+    prevBtn.style.display = index > 0 ? 'inline-block' : 'none';
+    // Generate button: show only on last step (multi)
+    genBtn.style.display = q.type === 'multi' ? 'inline-block' : 'none';
+
+    // Fade out, update, fade in
+    qText.style.opacity = '0';
+    qOpts.style.opacity = '0';
+
+    qText.textContent = q.text;
+
+    if (q.type === 'single') {
+      qOpts.innerHTML = q.options.map(function (opt, i) {
+        return '<button class="quiz-option" onclick="selectSingle(\'' + q.id + '\',' + i + ')">' + opt + '</button>';
+      }).join('');
+    } else {
+      // Multi-select checkboxes
+      qOpts.innerHTML = q.options.map(function (opt, i) {
+        return '<label class="quiz-option quiz-option-check">' +
+          '<input type="checkbox" name="' + q.id + '" value="' + i + '"> ' + opt +
+          '</label>';
+      }).join('');
+    }
+
+    requestAnimationFrame(function () {
+      qText.style.transition = 'opacity 0.35s, transform 0.35s';
+      qText.style.transform = 'translateY(16px)';
+      qOpts.style.transition = 'opacity 0.35s';
+      requestAnimationFrame(function () {
+        qText.style.opacity = '1';
+        qText.style.transform = 'translateY(0)';
+        qOpts.style.opacity = '1';
+      });
+    });
+  }
+
+  function selectSingle(questionId, optionIndex) {
+    quizAnswers[questionId] = {
+      index : optionIndex,
+      text  : questions.find(function (q) { return q.id === questionId; }).options[optionIndex]
+    };
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      setTimeout(function () { renderQuestion(currentQuestion); }, 200);
+    } else {
+      showLoading();
+    }
+  }
+
+  function prevQuestion() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      renderQuestion(currentQuestion);
+    }
+  }
+
+  function submitQuiz() {
+    // Collect multi-select answers
+    var checked = document.querySelectorAll('#quiz-options input[type="checkbox"]:checked');
+    quizAnswers['q5'] = Array.from(checked).map(function (cb) {
+      return questions[4].options[parseInt(cb.value)];
+    });
+    showLoading();
+  }
+
+  /* ============================================================
+     LOADING SCREEN (10-second countdown)
+     ============================================================ */
+  function showLoading() {
+    const quizState = document.getElementById('quiz-state');
+    quizState.style.display = 'none';
+    const loadingState = document.getElementById('loading-state');
+    loadingState.style.opacity = '0';
+    loadingState.style.display = 'flex';
+    requestAnimationFrame(function () {
+      loadingState.style.transition = 'opacity 0.5s';
+      loadingState.style.opacity = '1';
+      setTimeout(function () { loadingState.style.transition = ''; }, 500);
+    });
+    animateLoading();
+    document.getElementById('quiz-inline').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function animateLoading() {
+    const bar      = document.getElementById('loading-bar-fill');
+    const timeEl   = document.getElementById('loading-time');
+    let remaining  = 10;
+
+    function tick() {
+      var pct = Math.round(((10 - remaining) / 10) * 100);
+      bar.style.width = pct + '%';
+      timeEl.textContent = 'Time remaining: ' + remaining + ' second' + (remaining === 1 ? '' : 's');
+      if (remaining > 0) {
+        remaining--;
+      } else {
+        clearInterval(countdownId);
+        setTimeout(showCongratsPage, 400);
+      }
+    }
+    tick();
+    var countdownId = setInterval(tick, 1000);
+  }
+
+  /* ============================================================
+     CONGRATULATIONS PAGE
+     ============================================================ */
+  function showCongratsPage() {
+    const loadingState = document.getElementById('loading-state');
+    loadingState.style.display = 'none';
+    const congratsState = document.getElementById('congrats-state');
+    congratsState.style.opacity = '0';
+    congratsState.style.display = 'flex';
+    requestAnimationFrame(function () {
+      congratsState.style.transition = 'opacity 0.5s';
+      congratsState.style.opacity = '1';
+      setTimeout(function () { congratsState.style.transition = ''; }, 500);
+    });
+    document.getElementById('quiz-inline').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* ============================================================
+     COUNTDOWN TIMER
+     ============================================================ */
+  function startTimer() {
+    let totalSeconds = CONFIG.TIMER_MINUTES * 60;
+    const display = document.getElementById('countdown');
+
+    function update() {
+      const m = Math.floor(totalSeconds / 60);
+      const s = totalSeconds % 60;
+      display.textContent =
+        String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      } else {
+        clearInterval(timerInterval);
+        display.textContent = '00:00';
+        display.style.animation = 'none';
+        display.style.color = '#555';
+      }
+    }
+
+    update();
+    const timerInterval = setInterval(update, 1000);
+  }
+
+  /* ============================================================
+     FAQ ACCORDION
+     ============================================================ */
+
+  function toggleFaqNew(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-new-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function (el) { el.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+  }
+
+  /* ============================================================
+     SHOW SALES PAGE
+     ============================================================ */
+  function showSalesPage() {
+    const sales = document.getElementById('page-sales');
+    sales.style.opacity = '0';
+    sales.classList.add('active');
+    requestAnimationFrame(function () {
+      sales.style.transition = 'opacity 0.7s';
+      sales.style.opacity = '1';
+      setTimeout(function () { sales.style.transition = ''; }, 700);
+    });
+    setTimeout(function () {
+      sales.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+    startFinalTimer();
+    startLicenseCounter();
+    startSocialProof();
+  }
+
+  /* ============================================================
+     LICENSE COUNTER  84 → 11, every 45 seconds
+     ============================================================ */
+  function startLicenseCounter() {
+    var count = 84;
+    var el = document.getElementById('license-count');
+    if (!el) return;
+    setInterval(function () {
+      if (count > 11) {
+        count--;
+        el.textContent = count;
+        if (count <= 20) { el.classList.add('blink-red'); }
+      }
+    }, 45000);
+  }
+
+  /* ============================================================
+     FINAL SALES TIMER — 15 minutes
+     ============================================================ */
+  function startFinalTimer() {
+    var totalSeconds = 15 * 60;
+    var display = document.getElementById('final-countdown');
+    if (!display) return;
+    function update() {
+      var m = Math.floor(totalSeconds / 60);
+      var s = totalSeconds % 60;
+      display.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      } else {
+        clearInterval(tid);
+        display.textContent = '00:00';
+        display.style.animation = 'none';
+        display.style.color = '#555';
+      }
+    }
+    update();
+    var tid = setInterval(update, 1000);
+  }
+
+  /* ============================================================
+     SOCIAL PROOF NOTIFICATIONS
+     ============================================================ */
+  var socialProofData = [
+    { name: "Ashley M.",    location: "Austin, TX" },
+    { name: "Jamie R.",     location: "Denver, CO" },
+    { name: "Brittany K.",  location: "Nashville, TN" },
+    { name: "Michelle T.",  location: "Phoenix, AZ" },
+    { name: "Stephanie L.", location: "Charlotte, NC" },
+    { name: "Brianna W.",   location: "Seattle, WA" },
+    { name: "Melissa H.",   location: "Orlando, FL" },
+    { name: "Taylor C.",    location: "Las Vegas, NV" },
+    { name: "Amanda F.",    location: "Portland, OR" },
+    { name: "Julia B.",     location: "Dallas, TX" },
+    { name: "Rachel N.",    location: "Atlanta, GA" },
+    { name: "Karen S.",     location: "Minneapolis, MN" },
+    { name: "Lauren P.",    location: "San Diego, CA" },
+    { name: "Diana A.",     location: "Columbus, OH" },
+    { name: "Heather J.",   location: "Raleigh, NC" },
+    { name: "Christina M.", location: "Salt Lake City, UT" },
+    { name: "Nicole D.",    location: "Tampa, FL" },
+    { name: "Renee G.",     location: "Kansas City, MO" },
+    { name: "Tiffany E.",   location: "Indianapolis, IN" },
+    { name: "Natalie V.",   location: "Richmond, VA" },
+    { name: "Samantha O.",  location: "Boise, ID" },
+    { name: "Marcia L.",    location: "San Antonio, TX" },
+    { name: "Kayla R.",     location: "Louisville, KY" },
+    { name: "Dana H.",      location: "Albuquerque, NM" },
+    { name: "Vanessa C.",   location: "Memphis, TN" },
+    { name: "Courtney W.",  location: "Oklahoma City, OK" },
+    { name: "Danielle S.",  location: "Pittsburgh, PA" },
+    { name: "Tracy B.",     location: "Tucson, AZ" },
+    { name: "Alyssa F.",    location: "Fresno, CA" },
+    { name: "Grace N.",     location: "Milwaukee, WI" }
+  ];
+
+  function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  function startSocialProof() {
+    var data = shuffleArray(socialProofData);
+    var idx = 0;
+
+    function showToast() {
+      if (idx >= data.length) { data = shuffleArray(socialProofData); idx = 0; }
+      var person = data[idx++];
+      var wrap = document.getElementById('social-proof-wrap');
+      while (wrap.firstChild) { wrap.removeChild(wrap.firstChild); }
+
+      var toast = document.createElement('div');
+      toast.className = 'sp-toast';
+      toast.innerHTML =
+        '<span class="sp-toast-icon">🛒</span>' +
+        '<div>' +
+          '<p class="sp-toast-name">' + person.name + ' — ' + person.location + '</p>' +
+          '<p class="sp-toast-action">Just purchased the Cocoburn Protocol</p>' +
+          '<p class="sp-toast-verified">✅ Verified Purchase · just now</p>' +
+        '</div>';
+      toast.onclick = function () {
+        toast.classList.remove('show');
+        setTimeout(function () { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 400);
+      };
+      wrap.appendChild(toast);
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { toast.classList.add('show'); });
+      });
+
+      setTimeout(function () {
+        toast.classList.remove('show');
+        setTimeout(function () { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 400);
+      }, 4000);
+
+      var delay = 18000 + Math.floor(Math.random() * 10000);
+      setTimeout(showToast, delay);
+    }
+
+    setTimeout(showToast, 8000);
+  }
+</script>
+
+<!-- Social proof container (fixed bottom-left) -->
+<div id="social-proof-wrap"></div>
+
+</body>
+</html>
