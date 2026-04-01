@@ -953,13 +953,13 @@
       overflow: hidden;
     }
     @media (max-width: 480px) {
-      .media-logos { gap: 8px 10px; padding: 14px 8px 4px; }
-      .logo-nyt { font-size: 0.62rem !important; }
-      .logo-fox { font-size: 0.9rem !important; }
-      .logo-cnn { font-size: 0.9rem !important; }
-      .logo-cbs svg { width: 28px !important; height: 28px !important; }
-      .logo-cbs span { font-size: 0.75rem !important; }
-      .logo-abc svg { width: 28px !important; height: 28px !important; }
+      .media-logos { gap: 8px 12px; padding: 14px 8px 4px; }
+      .logo-nyt { font-size: 0.82rem !important; }
+      .logo-fox { font-size: 1.2rem !important; }
+      .logo-cnn { font-size: 1.2rem !important; }
+      .logo-cbs svg { width: 36px !important; height: 36px !important; }
+      .logo-cbs span { font-size: 1rem !important; }
+      .logo-abc svg { width: 36px !important; height: 36px !important; }
     }
     .media-logo {
       display: flex;
@@ -969,7 +969,7 @@
     }
     .logo-nyt {
       font-family: 'Times New Roman', Times, serif;
-      font-size: 1.05rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: #111;
       white-space: nowrap;
@@ -988,14 +988,14 @@
     }
     .logo-fox {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.9rem;
       font-weight: 900;
       color: #111;
       letter-spacing: -1px;
     }
     .logo-cnn {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.9rem;
       font-weight: 900;
       color: #cc0000;
       font-style: italic;
@@ -1887,6 +1887,27 @@
     </script>
   </div>
 
+  <!-- Media logos -->
+  <div class="media-logos">
+    <span class="media-logo logo-nyt">The New York Times</span>
+    <span class="media-logo logo-cbs">
+      <svg viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#000"/>
+        <circle cx="30" cy="30" r="10" fill="#fff"/>
+        <circle cx="30" cy="30" r="6" fill="#000"/>
+      </svg>
+      <span style="font-weight:900;font-size:1.4rem;letter-spacing:-0.5px;">CBS</span>
+    </span>
+    <span class="media-logo logo-abc">
+      <svg viewBox="0 0 60 60" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#000"/>
+        <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-family="Arial Black,sans-serif" font-size="20" font-weight="900">abc</text>
+      </svg>
+    </span>
+    <span class="media-logo logo-fox">FOX</span>
+    <span class="media-logo logo-cnn">CNN</span>
+  </div>
+
   <!-- Inline quiz/loading/congrats (appear below video, same card) -->
   <div id="quiz-inline">
 
@@ -1935,27 +1956,6 @@
       </button>
     </div>
 
-  </div>
-
-  <!-- Media logos -->
-  <div class="media-logos">
-    <span class="media-logo logo-nyt">The New York Times</span>
-    <span class="media-logo logo-cbs">
-      <svg viewBox="0 0 60 60" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="28" fill="#000"/>
-        <circle cx="30" cy="30" r="10" fill="#fff"/>
-        <circle cx="30" cy="30" r="6" fill="#000"/>
-      </svg>
-      <span style="font-weight:900;font-size:1.1rem;letter-spacing:-0.5px;">CBS</span>
-    </span>
-    <span class="media-logo logo-abc">
-      <svg viewBox="0 0 60 60" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="28" fill="#000"/>
-        <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-family="Arial Black,sans-serif" font-size="20" font-weight="900">abc</text>
-      </svg>
-    </span>
-    <span class="media-logo logo-fox">FOX</span>
-    <span class="media-logo logo-cnn">CNN</span>
   </div>
 
 </section>
