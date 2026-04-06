@@ -639,6 +639,20 @@
        SCRIPTS
   ══════════════════════════════════════════ -->
   <script>
+    /* ── Remove " - Downsell" from Mundpay widget text ── */
+    var observer = new MutationObserver(function () {
+      document.querySelectorAll('[data-mndpay-render] *').forEach(function (el) {
+        el.childNodes.forEach(function (node) {
+          if (node.nodeType === 3 && node.nodeValue.includes(' - Downsell')) {
+            node.nodeValue = node.nodeValue.replace(/ - Downsell/g, '');
+          }
+        });
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+  </script>
+
+  <script>
     /* ── Countdown Timer (10 minutes, synced between top + block 4) ── */
     var TIMER_SECONDS = 600;
     var timerExpired = false;
