@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last-Chance Offer — Cortisol Reset Protocol</title>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1735801364462937');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1735801364462937&ev=PageView&noscript=1"/></noscript>
+
+  <!-- UTMify -->
+  <script>
+    window.pixelId = "69cea0b7d14675bcaf652142";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <!-- Mundpay -->
+  <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Variables ── */
+    :root {
+      --wine:    #6B0F1A;
+      --salmon:  #E8956D;
+      --green:   #22c55e;
+      --green-d: #16a34a;
+      --gold:    #fbbf24;
+      --text:    #1a1a1a;
+      --muted:   #6b7280;
+      --bg:      #ffffff;
+      --bg2:     #f9f9f9;
+      --border:  #e5e7eb;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      padding-top: 52px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.2;
+    }
+
+    a { text-decoration: none; }
+
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .text-center { text-align: center; }
+
+    /* ── Urgency Bar ── */
+    #urgency-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--wine);
+      color: #fff;
+      text-align: center;
+      padding: 12px 16px;
+      z-index: 9999;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    #urgency-bar .countdown-display {
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Block 2 — Headline ── */
+    #headline {
+      padding: 64px 20px 48px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--salmon);
+      margin-bottom: 20px;
+    }
+
+    #headline h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 900;
+      color: var(--wine);
+      max-width: 680px;
+      margin: 0 auto 20px;
+    }
+
+    #headline .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── Block 3 — TSL Body ── */
+    #tsl-body {
+      padding: 0 20px 56px;
+    }
+
+    .tsl-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .tsl-inner p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .tsl-inner p:last-child { margin-bottom: 0; }
+
+    .divider {
+      width: 100%;
+      height: 2px;
+      background: var(--salmon);
+      border-radius: 2px;
+      margin: 36px 0;
+      opacity: 0.45;
+    }
+
+    .includes-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+
+    .includes-list li {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .includes-list li:last-child { border-bottom: none; }
+
+    .includes-list li strong {
+      color: var(--wine);
+    }
+
+    /* Price Box */
+    .price-box {
+      background: var(--bg2);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 36px 28px;
+      text-align: center;
+      max-width: 460px;
+      margin: 0 auto 36px;
+    }
+
+    .price-strike {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      text-decoration: line-through;
+      margin-bottom: 10px;
+    }
+
+    .price-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--wine);
+      margin-bottom: 8px;
+    }
+
+    .price-amount {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 4rem);
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .price-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Block 4 — CTA ── */
+    #cta-main {
+      padding: 0 20px 64px;
+      text-align: center;
+    }
+
+    .secondary-timer {
+      font-size: 0.95rem;
+      color: #ef4444;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+
+    .secondary-timer .countdown-display {
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+    }
+
+    @keyframes pulse-cta {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+      50%       { transform: scale(1.03); box-shadow: 0 0 0 14px rgba(34,197,94,0); }
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background: var(--green);
+      color: #0a0a0a;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 20px 32px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      animation: pulse-cta 2s infinite;
+      max-width: 560px;
+      width: 100%;
+      line-height: 1.3;
+    }
+
+    .btn-cta:hover { background: var(--green-d); }
+
+    .payment-trust {
+      margin-top: 18px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .pay-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pay-badge {
+      background: #e5e7eb;
+      color: #374151;
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .btn-no-thanks {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 9px 20px;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-no-thanks:hover { color: #6b7280; border-color: #9ca3af; }
+
+    /* ── Block 5 — Guarantee ── */
+    #guarantee {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 20px;
+    }
+
+    .guarantee-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .guarantee-icon {
+      font-size: 3.5rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .guarantee-text h2 {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: 800;
+      color: var(--wine);
+      margin-bottom: 10px;
+    }
+
+    .guarantee-text p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 560px) {
+      .guarantee-inner { flex-direction: column; gap: 20px; }
+      .guarantee-icon { font-size: 2.8rem; }
+    }
+
+    /* ── Block 6 — Testimonials ── */
+    #testimonials {
+      padding: 64px 20px;
+    }
+
+    #testimonials h2 {
+      font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+      font-weight: 800;
+      color: var(--wine);
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .testimonials-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .t-card {
+      background: var(--bg);
+      border-left: 4px solid var(--salmon);
+      border-radius: 10px;
+      padding: 24px 24px 24px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .t-stars {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .t-text {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .t-author {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    /* ── Block 7 — Final CTA ── */
+    #cta-final {
+      background: var(--wine);
+      padding: 72px 20px;
+      text-align: center;
+    }
+
+    #cta-final h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #cta-final p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+
+    /* ── Social Proof Toasts ── */
+    #social-proof-wrap {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 9999;
+      width: 300px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 480px) {
+      #social-proof-wrap { width: 260px; left: 12px; bottom: 12px; }
+    }
+
+    .sp-toast {
+      background: #fff;
+      border-radius: 12px;
+      border-left: 4px solid var(--salmon);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.13);
+      padding: 14px 16px;
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateX(-120%);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      pointer-events: auto;
+    }
+
+    .sp-toast.show { opacity: 1; transform: translateX(0); }
+
+    .sp-toast-icon   { font-size: 1.3rem; flex-shrink: 0; }
+    .sp-toast-name   { font-size: 0.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+    .sp-toast-action { font-size: 0.75rem; color: #555; margin-bottom: 2px; }
+    .sp-toast-verified { font-size: 0.7rem; color: var(--salmon); font-weight: 600; }
+
+    /* ── Footer ── */
+    footer {
+      background: #f3f4f6;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       BLOCK 1 — URGENCY BAR (fixed top)
+  ══════════════════════════════════════════ -->
+  <div id="urgency-bar">
+    <span id="urgency-text">
+      ⚠️ WAIT — Special Last-Chance Offer | Expires in:&nbsp;<span class="countdown-display" id="top-timer">10:00</span>
+    </span>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       BLOCK 2 — HEADLINE
+  ══════════════════════════════════════════ -->
+  <section id="headline">
+    <div class="container text-center">
+      <span class="eyebrow">Wait — We Heard You</span>
+      <h1>We Know $27 Felt Like Too Much Right Now.<br>So We Made It Impossible to Say No.</h1>
+      <p class="subtitle">Same Cortisol Reset Protocol. Same 4 modules.<br>Same lifetime access. Half the price — one time only.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       BLOCK 3 — TSL BODY
+  ══════════════════════════════════════════ -->
+  <section id="tsl-body">
+    <div class="tsl-inner">
+
+      <p>I get it. You just made a purchase and $27 felt like one step too far. That's completely okay. But before you go — I want to make sure cortisol doesn't quietly sabotage everything you're about to build with your Cocoburn Protocol.</p>
+
+      <p>Here's the truth most people don't want to hear: the Cocoburn Ketogenic Protocol forces your body into ketosis. But if your cortisol is chronically elevated — and for most women over 38, it is — <strong>your body will fight the fat burning every single step of the way.</strong> Not because the protocol isn't working. Because there's a hormonal wall blocking the results from showing up on the scale.</p>
+
+      <p>That wall has a name: cortisol. And it doesn't respond to willpower. It doesn't respond to discipline. It responds to one thing — a precise, science-backed protocol that resets your hormonal rhythm morning and night. That's exactly what The Cortisol Reset Protocol does.</p>
+
+      <div class="divider"></div>
+
+      <p>When you say yes today, you get everything:</p>
+
+      <ul class="includes-list">
+        <li>🌅 <strong>The Cortisol Reset Guide</strong> — Your morning and evening routine to deactivate stress mode and amplify your Cocoburn results. Less than 8 minutes a day.</li>
+        <li>🗺️ <strong>The Emotional Hunger Map</strong> — The 60-second method to interrupt emotional cravings before they take over. Finally feel in control.</li>
+        <li>😴 <strong>The Deep Sleep Accelerator</strong> — Turn every night into your most powerful fat-burning window by optimizing your sleep architecture.</li>
+        <li>🔒 <strong>The Hormonal Food Code (Secret Bonus)</strong> — 12 cortisol-lowering foods and the Anti-Stress Elixir recipe revealed exclusively inside the app.</li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <p>The full Cortisol Reset Protocol was offered moments ago for $27. That offer is no longer available. But because you're still here — and because I genuinely want you to get the complete result from your Cocoburn investment — I'm making one final offer.</p>
+
+      <div class="price-box">
+        <p class="price-strike">Regular Price: $27</p>
+        <p class="price-label">Your Price Right Now:</p>
+        <p class="price-amount">$13,50</p>
+        <p class="price-note">One-time payment — Lifetime Access<br>Inside the same app you already have.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       BLOCK 4 — PRIMARY CTA
+  ══════════════════════════════════════════ -->
+  <section id="cta-main">
+    <div class="container text-center">
+      <p class="secondary-timer">⏳ This offer expires in: <span class="countdown-display" id="bottom-timer">10:00</span></p>
+
+      <div data-mndpay-render="019d6494-8746-7294-a2fe-cf7bbc714146"></div>
+
+      <div class="payment-trust">
+        🔒 Secure Checkout — One-Time Payment — No Subscription
+        <div class="pay-badges">
+          <span class="pay-badge">Visa</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">Discover</span>
+          <span class="pay-badge">Amex</span>
+        </div>
+      </div>
+
+      <br>
+      <a href="#" class="btn-no-thanks">
+        No thanks, I'll leave the cortisol blocking my results.
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       BLOCK 5 — GUARANTEE
+  ══════════════════════════════════════════ -->
+  <section id="guarantee">
+    <div class="guarantee-inner">
+      <div class="guarantee-icon">🏅</div>
+      <div class="guarantee-text">
+        <h2>30-Day Money-Back Guarantee</h2>
+        <p>Follow The Cortisol Reset Protocol for 30 days alongside your Cocoburn ritual. If you don't feel a difference in your energy, cravings, sleep, or results on the scale — send one email to <strong>cocoburnketoprotocol@gmail.com</strong> and receive a full refund. No questions asked.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       BLOCK 6 — TESTIMONIALS
+  ══════════════════════════════════════════ -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>What Women Are Saying About The Cortisol Reset</h2>
+
+      <div class="testimonials-list">
+
+        <div class="t-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-text">"I was skeptical because I'd tried everything for my night cravings. But the Emotional Hunger Map stopped them in 3 days. On day 7, I lost 2 extra pounds I hadn't been able to shift in months. The morning routine is now non-negotiable for me."</p>
+          <p class="t-author">Jennifer M. — Austin, TX</p>
+        </div>
+
+        <div class="t-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-text">"I combined the Deep Sleep Accelerator with my Cocoburn ritual and my results literally doubled. I went from losing 4 pounds in the first two weeks to losing 9. I had no idea sleep was that powerful."</p>
+          <p class="t-author">Rachel S. — Denver, CO</p>
+        </div>
+
+        <div class="t-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-text">"The Anti-Stress Elixir at 3pm changed my life. That was always my breaking point — the moment I'd reach for something sweet. Now I make the elixir instead. My cravings dropped by at least 80% within a week."</p>
+          <p class="t-author">Patricia L. — Nashville, TN</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       BLOCK 7 — FINAL CTA
+  ══════════════════════════════════════════ -->
+  <section id="cta-final">
+    <div class="container text-center">
+      <h2>This Is Your Last Opportunity.</h2>
+      <p>The Cocoburn Protocol is working. But cortisol is the one thing that can slow it down — or stop it completely. For less than a cup of coffee, you can remove that obstacle permanently. The second you leave this page, this offer disappears. This price will never be available again.</p>
+
+      <div data-mndpay-render="019d6494-8746-7294-a2fe-cf7bbc714146"></div>
+
+      <div class="payment-trust" style="color: rgba(255,255,255,0.55); margin-top: 18px;">
+        🔒 Secure Checkout — One-Time Payment — No Subscription
+      </div>
+
+      <br>
+      <a href="#" class="btn-no-thanks" style="color: rgba(255,255,255,0.35); border-color: rgba(255,255,255,0.2);">
+        No thanks, I'll leave the cortisol blocking my results.
+      </a>
+    </div>
+  </section>
+
+  <!-- Social proof container -->
+  <div id="social-proof-wrap"></div>
+
+  <footer>
+    &copy; 2025 Cocoburn Ketogenic Protocol. All rights reserved.<br>
+    This offer is available only on this page and will not be repeated.
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <script>
+    /* ── Countdown Timer (10 minutes, synced between top + block 4) ── */
+    var TIMER_SECONDS = 600;
+    var timerExpired = false;
+
+    function formatTime(s) {
+      var m = Math.floor(s / 60);
+      var sec = s % 60;
+      return (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    function updateTimers(s) {
+      var displays = document.querySelectorAll('.countdown-display');
+      displays.forEach(function (el) { el.textContent = formatTime(s); });
+    }
+
+    function onTimerExpired() {
+      timerExpired = true;
+      document.getElementById('urgency-text').textContent =
+        '⚠️ LAST CHANCE — This offer disappears when you leave.';
+      var bottomTimer = document.getElementById('bottom-timer');
+      if (bottomTimer) bottomTimer.closest('.secondary-timer').style.display = 'none';
+    }
+
+    (function startTimer() {
+      var remaining = TIMER_SECONDS;
+      updateTimers(remaining);
+      var interval = setInterval(function () {
+        remaining--;
+        if (remaining <= 0) {
+          clearInterval(interval);
+          updateTimers(0);
+          onTimerExpired();
+          return;
+        }
+        updateTimers(remaining);
+      }, 1000);
+    })();
+
+    /* ── Social Proof Toasts ── */
+    var spNames = [
+      ['Ashley R.', 'Dallas, TX'],    ['Megan T.', 'Phoenix, AZ'],
+      ['Lauren K.', 'Seattle, WA'],   ['Stephanie M.', 'Chicago, IL'],
+      ['Amanda B.', 'Houston, TX'],   ['Jessica H.', 'San Diego, CA'],
+      ['Emily C.', 'Atlanta, GA'],    ['Samantha W.', 'Boston, MA'],
+      ['Nicole F.', 'Portland, OR'],  ['Brittany L.', 'Charlotte, NC'],
+      ['Heather J.', 'Denver, CO'],   ['Amber N.', 'Minneapolis, MN'],
+      ['Kayla P.', 'Tampa, FL'],      ['Tiffany G.', 'Las Vegas, NV'],
+      ['Danielle S.', 'Detroit, MI'], ['Crystal A.', 'Orlando, FL'],
+      ['Shannon D.', 'Columbus, OH'], ['Vanessa R.', 'Austin, TX'],
+      ['Melissa Q.', 'Nashville, TN'],['Rebecca Z.', 'Louisville, KY'],
+      ['Jennifer M.', 'Austin, TX'],  ['Rachel S.', 'Denver, CO'],
+      ['Patricia L.', 'Nashville, TN'],['Christine Y.', 'Sacramento, CA'],
+      ['Monica E.', 'Raleigh, NC'],   ['Diana V.', 'Memphis, TN'],
+      ['Sandra O.', 'Baltimore, MD'], ['Kimberly U.', 'St. Louis, MO'],
+      ['Donna I.', 'Pittsburgh, PA'], ['Carol X.', 'Richmond, VA']
+    ];
+
+    var spIdx = 0;
+
+    function showToast() {
+      var wrap = document.getElementById('social-proof-wrap');
+      var entry = spNames[spIdx % spNames.length];
+      spIdx++;
+
+      var toast = document.createElement('div');
+      toast.className = 'sp-toast';
+      toast.innerHTML =
+        '<div class="sp-toast-icon">⚡</div>' +
+        '<div>' +
+          '<div class="sp-toast-name">' + entry[0] + '</div>' +
+          '<div class="sp-toast-action">' + entry[1] + ' just added the Cortisol Reset</div>' +
+          '<div class="sp-toast-verified">✔ Verified Purchase</div>' +
+        '</div>';
+
+      toast.onclick = function () {
+        toast.classList.remove('show');
+        setTimeout(function () { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 400);
+      };
+
+      wrap.appendChild(toast);
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { toast.classList.add('show'); });
+      });
+
+      setTimeout(function () {
+        toast.classList.remove('show');
+        setTimeout(function () { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 400);
+      }, 4500);
+
+      var delay = 25000 + Math.floor(Math.random() * 15000);
+      setTimeout(showToast, delay);
+    }
+
+    setTimeout(showToast, 12000);
+  </script>
+
+</body>
+</html>
