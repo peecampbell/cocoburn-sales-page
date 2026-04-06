@@ -461,6 +461,11 @@
     .sp-toast-action { font-size: 0.75rem; color: #555; margin-bottom: 2px; }
     .sp-toast-verified { font-size: 0.7rem; color: var(--salmon); font-weight: 600; }
 
+    /* ── Mundpay widget text override ── */
+    [data-mndpay-render] *:not(button):not(a):not(input) {
+      color: #ffffff !important;
+    }
+
     /* ── Footer ── */
     footer {
       background: #f3f4f6;
